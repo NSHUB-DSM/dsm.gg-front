@@ -41,6 +41,7 @@ const WriteBtn = styled(Link)`
   font-size: 14px;
   color: #1f7bfc;
   margin-left: 200px;
+  text-decoration: none;
   &:hover {
     opacity: 0.7;
   }
