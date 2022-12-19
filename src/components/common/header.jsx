@@ -1,9 +1,10 @@
 import styled from "styled-components";
-import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ReactComponent as LolLogo } from "../../assets/svgs/lollogo.svg";
 
 const Header = () => {
+  const [login, setLogin] = useState(false);
   return (
     <>
       <TopHeaderContainer>
@@ -11,7 +12,11 @@ const Header = () => {
           <LolLogo />
           <div>리그오브레전드</div>
         </LoLButton>
-        <LoginStyle to="/user/login">로그인</LoginStyle>
+        {login ? (
+          <User>잔상이당</User>
+        ) : (
+          <LoginStyle to="/user/login">로그인</LoginStyle>
+        )}
       </TopHeaderContainer>
       <HeaderContainer>
         <div>
@@ -23,6 +28,9 @@ const Header = () => {
           <LinkStyle to="/match">
             <Item>매칭</Item>
           </LinkStyle>
+          <LinkStyle to="/ranking">
+            <Item>랭킹</Item>
+          </LinkStyle>
           <LinkStyle to="/notice">
             <Item>커뮤니티</Item>
           </LinkStyle>
@@ -32,6 +40,22 @@ const Header = () => {
   );
 };
 export default Header;
+
+const User = styled.button`
+  height: 38px;
+  border-radius: 10px;
+  margin-right: 36px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: white;
+  cursor: pointer;
+  transition: 0.8s;
+  :hover {
+    background-color: #f2f2f2;
+  }
+`;
 
 const LinkStyle = styled(Link)`
   text-decoration: none;
@@ -47,9 +71,13 @@ const LoginStyle = styled(Link)`
   border-radius: 10px;
   font-weight: 660;
   padding-top: 6px;
-  margin-right: 20px;
+  margin-right: 36px;
   text-decoration: none;
+  transition: 0.8s;
   color: black;
+  :hover {
+    background-color: #F2F2F2;
+  }
 `;
 
 const TopHeaderContainer = styled.div`
