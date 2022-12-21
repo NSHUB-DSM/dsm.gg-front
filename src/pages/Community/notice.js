@@ -3,9 +3,13 @@ import { ReactComponent as Label } from "../../assets/svgs/lolLabel.svg";
 import Header from "../../components/common/header";
 import SortCategoryBox from "../../components/Community/SortCategory";
 import { ReactComponent as GameLogo } from '../../assets/svgs/gameLogo.svg';
+import useTitle from '../../components/Title/title';
 
 
 export default function CommunityPage() {
+    const titleUpdater = useTitle("불러오는 중...")
+    setTimeout(() => titleUpdater("커뮤니티 - DSM.GG"))
+
   return (
     <Background>
         <Header />
