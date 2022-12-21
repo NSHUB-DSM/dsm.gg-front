@@ -37,13 +37,11 @@ const GameTitle = styled.h2`
   font-size: 30px;
   margin-left: 200px;
   animation: ${easeIn} 0.6s ease-in;
-  position: fixed;
 `;
 
 const LabelStyle = styled(Label)`
   width: 100%;
   padding-bottom: 32px;
-  position: fixed;
 `;
 
 const Background = styled.div`
