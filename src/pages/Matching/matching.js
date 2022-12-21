@@ -37,7 +37,7 @@ const Box = styled.div`
   width: 335px;
   height: 93px;
   margin: 0 auto;
-  animation: ${easeIn} 1s ease-in;
+  animation: ${easeIn} 0.7s ease-in
 `
 
 const Background = styled.div`
