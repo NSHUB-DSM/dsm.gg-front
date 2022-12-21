@@ -2,8 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import Header from '../../components/common/header';
 import SignInput from '../../components/Signup/signinput';
+import useTitle from '../../components/Title/title';
 
 export default function SignupPage() {
+    const titleUpdater = useTitle("불러오는 중...")
+    setTimeout(() => titleUpdater("회원가입 - DSM.GG"))
+
   return (
     <Background>
       <Header />
