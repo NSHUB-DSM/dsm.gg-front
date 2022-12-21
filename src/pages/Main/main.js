@@ -4,11 +4,15 @@ import Header from '../../components/common/header';
 import { ReactComponent as MainLogo } from "../../assets/svgs/mainLogo.svg";
 import { ReactComponent as SearchLogo } from '../../assets/svgs/searchLogo.svg';
 import { useState, useEffect } from 'react';
+import useTitle from '../../components/Title/title';
 import axios from 'axios';
+
 
 export default function MainPage() {
     const [search, setSearch] = useState("");
     const [lists, setLists] = useState([]);
+    const titleUpdater = useTitle("불러오는 중...")
+    setTimeout(() => titleUpdater("메인 홈 - DSM.GG"))
   
     const onChangeSearch = (e) => {
       e.preventDefault();
