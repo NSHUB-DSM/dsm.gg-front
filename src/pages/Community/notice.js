@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { ReactComponent as Label } from "../../assets/svgs/lolLabel.svg";
 import Header from "../../components/common/header";
 import SortCategoryBox from "../../components/Community/SortCategory";
@@ -16,15 +16,24 @@ export default function CommunityPage() {
   );
 }
 
+const easeIn = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+`
+
 const GameTitle = styled.h2`
   color: white;
   margin-top: -100px;
   font-size: 30px;
   margin-left: 200px;
-`
-const LogoStyle = styled.div`
-  width: 64px;
-  height: 69px;
+  animation: ${easeIn} 0.6s ease-in;
 `
 
 const LabelStyle = styled(Label)`
@@ -36,4 +45,11 @@ const Background = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: #fdfdfd;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+  }
 `;
