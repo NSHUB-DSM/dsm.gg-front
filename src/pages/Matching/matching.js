@@ -1,8 +1,12 @@
 import styled, { keyframes } from 'styled-components'
 import React from 'react';
 import Header from '../../components/common/header';
+import useTitle from '../../components/Title/title';
 
 export default function MatchingPage() {
+    const titleUpdater = useTitle("불러오는 중...")
+    setTimeout(() => titleUpdater("매칭 찾기 - 리그오브레전드"))
+
     return (
         <Background>
             <Header />
