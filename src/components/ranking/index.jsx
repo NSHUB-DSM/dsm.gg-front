@@ -1,8 +1,12 @@
 import Header from "../common/header";
 import styled from "styled-components";
 import UserList from "./userList";
+import useTitle from '../Title/title';
 
 const RankingPage = () => {
+  const titleUpdater = useTitle("불러오는 중...")
+  setTimeout(() => titleUpdater("소환사 랭킹 - 리그오브레전드")) 
+
   return (
     <>
       <Header />
