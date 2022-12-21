@@ -7,7 +7,7 @@ const RankingPage = () => {
     <>
       <Header />
       <RankingContainer>
-        <Title>교내 소환자 랭킹</Title>
+        <Title>교내 소환사 랭킹</Title>
         <RankingList>
           <List>
             <div>
