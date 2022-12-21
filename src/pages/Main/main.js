@@ -12,7 +12,7 @@ export default function MainPage() {
     const [search, setSearch] = useState("");
     const [lists, setLists] = useState([]);
     const titleUpdater = useTitle("불러오는 중...")
-    setTimeout(() => titleUpdater("메인 홈 - DSM.GG"))
+    setTimeout(() => titleUpdater("DSM.GG"))
   
     const onChangeSearch = (e) => {
       e.preventDefault();
