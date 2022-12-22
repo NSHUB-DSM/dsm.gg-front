@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const EmailRegex =
   /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
@@ -83,12 +83,12 @@ export default function SignInput() {
     }
   };
 
-  const onSubmit = () => {
+  const onSubmit = async () => {
     if (!validation()) {
       return alert("로그인에 실패하였습니다.");
     }
 
-    axios
+    await axios
       .post("", {
         username: username,
         email: email,
@@ -97,8 +97,7 @@ export default function SignInput() {
       .then(function (response) {
         if (response.data.code === 0) {
           alert("로그인에 성공하였습니다.");
-          navigate("/user/login")
-          
+          navigate("/user/login");
         } else {
           if (response.data.code === 10000) {
             alert("중복된 닉네임입니다. 다른 닉네임으로 시도해주세요.");
