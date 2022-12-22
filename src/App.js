@@ -9,6 +9,7 @@ import CommunityPage from './pages/Community/notice';
 import MatchingPage from './pages/Matching/matching';
 import WritePage from './pages/Community/write';
 import RankingPage from "./components/ranking";
+import MakeMatching from "./pages/Matching/make";
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="/match" element={<MatchingPage />}></Route>
           <Route path="/notice/post" element={<WritePage />}></Route>
           <Route path="/ranking" element={<RankingPage />}/>
+          <Route path="/makematching" element={<MakeMatching />}/>
         </Routes>
       </BrowserRouter>
     </StyleProvider>

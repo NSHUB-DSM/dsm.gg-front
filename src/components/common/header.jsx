@@ -23,7 +23,9 @@ const Header = () => {
           <LinkStyle to="/">
             <Item>홈</Item>
           </LinkStyle>
-          <Item>매칭 생성</Item>
+          <LinkStyle to = "/makematching">
+            <Item>매칭 생성</Item>
+          </LinkStyle>
           <Item>통계</Item>
           <LinkStyle to="/match">
             <Item>매칭</Item>
@@ -76,7 +78,7 @@ const LoginStyle = styled(Link)`
   transition: 0.8s;
   color: black;
   :hover {
-    background-color: #F2F2F2;
+    background-color: #f2f2f2;
   }
 `;
 
