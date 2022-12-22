@@ -5,10 +5,6 @@ import { useState } from "react";
 export default function SortCategoryBox() {
   const [isLogin, setIsLogin] = useState(false);
 
-  const handleClick = () => {
-    
-  };
-
   return (
     <>
       <Container>
