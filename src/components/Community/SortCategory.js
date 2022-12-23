@@ -33,7 +33,7 @@ export default function SortCategoryBox() {
               <CategoryBtn>영상</CategoryBtn>
             </Item>
           </ItemList>
-          <WriteBtn onClick={handleClick}>글쓰기</WriteBtn>
+          <WriteBtn>글쓰기</WriteBtn>
         </CategoryContainer>
       </Container>
     </>
