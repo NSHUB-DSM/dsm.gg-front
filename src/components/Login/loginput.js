@@ -1,14 +1,21 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
-import { ReactComponent as EmailLogo } from '../../assets/svgs/email.svg';
-import { ReactComponent as LockerLogo } from '../../assets/svgs/locker.svg';
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { ReactComponent as EmailLogo } from "../../assets/svgs/email.svg";
+import { ReactComponent as LockerLogo } from "../../assets/svgs/locker.svg";
 
 export default function LoginInput() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+
+  const onKeyPress = (e) => {
+    const regExp = /[^0-9a-zA-Z]/g;
+    if (regExp.test(e.target.value)) {
+      e.target.value = e.target.value.replace(regExp, "");
+    }
+  };
 
   const onLogin = () => {
     fetch("", {
@@ -25,14 +32,15 @@ export default function LoginInput() {
         alert("아이디 및 비밀번호가 일치하지 않습니다.");
       }
     });
-   }
+  };
 
-   return (
+  return (
     <>
       <EmailInput
         placeholder="이메일을 입력하세요"
         type="email"
         onChange={(e) => setEmail(e.target.value)}
+        onKeyUp={onKeyPress}
         value={email}
       />
       <EmailLogoBox>
@@ -54,7 +62,7 @@ export default function LoginInput() {
       </SignupStyle>
     </>
   );
-}   
+}
 
 const SignupStyle = styled(Link)`
   color: #1e5bd0;
@@ -75,7 +83,6 @@ const ForgotStyle = styled(Link)`
     opacity: 0.7;
   }
 `;
-
 
 const Button = styled.button`
   width: 468px;
