@@ -24,7 +24,6 @@ const Header = () => {
             <Item>홈</Item>
           </LinkStyle>
           <Item>매칭 생성</Item>
-          <Item>통계</Item>
           <LinkStyle to="/match">
             <Item>매칭</Item>
           </LinkStyle>
