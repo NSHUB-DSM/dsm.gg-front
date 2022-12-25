@@ -85,7 +85,7 @@ export default function SignInput() {
 
   const onSubmit = async () => {
     if (!validation()) {
-      return alert("로그인에 실패하였습니다.");
+      return alert("회원가입에 실패하였습니다.");
     }
 
     await axios
@@ -96,7 +96,7 @@ export default function SignInput() {
       })
       .then(function (response) {
         if (response.data.code === 0) {
-          alert("로그인에 성공하였습니다.");
+          alert("회원가입이 완료되었습니다!");
           navigate("/user/login");
         } else {
           if (response.data.code === 10000) {
