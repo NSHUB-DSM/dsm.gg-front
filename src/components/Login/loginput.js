@@ -10,12 +10,6 @@ export default function LoginInput() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const onKeyPress = (e) => {
-    const regExp = /[^0-9a-zA-Z]/g;
-    if (regExp.test(e.target.value)) {
-      e.target.value = e.target.value.replace(regExp, "");
-    }
-  };
 
   const onLogin = () => {
     fetch("", {
@@ -40,7 +34,6 @@ export default function LoginInput() {
         placeholder="이메일을 입력하세요"
         type="email"
         onChange={(e) => setEmail(e.target.value)}
-        onKeyUp={onKeyPress}
         value={email}
       />
       <EmailLogoBox>
