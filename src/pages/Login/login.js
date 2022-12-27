@@ -2,8 +2,12 @@ import styled from 'styled-components';
 import React from 'react';
 import Header from '../../components/common/header';
 import LoginInput from '../../components/Login/loginput';
+import useTitle from '../../components/Title/title';
 
 export default function LoginPage() {
+    const titleUpdater = useTitle("불러오는 중...")
+    setTimeout(() => titleUpdater("로그인 - DSM.GG"))
+
     return (
         <Background>
             <Header />

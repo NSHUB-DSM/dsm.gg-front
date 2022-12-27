@@ -3,8 +3,12 @@ import { ReactComponent as Label } from "../../assets/svgs/lolLabel.svg";
 import Header from "../../components/common/header";
 import SortCategoryBox from "../../components/Community/SortCategory";
 import { ReactComponent as GameLogo } from "../../assets/svgs/gameLogo.svg";
+import useTitle from '../../components/Title/title';
 
 export default function WritePage() {
+    const titleUpdater = useTitle("불러오는 중...")
+    setTimeout(() => titleUpdater("새 글 작성 - 리그오브레전드"))
+
   return (
     <Background>
       <Header />
@@ -33,13 +37,11 @@ const GameTitle = styled.h2`
   font-size: 30px;
   margin-left: 200px;
   animation: ${easeIn} 0.6s ease-in;
-  position: fixed;
 `;
 
 const LabelStyle = styled(Label)`
   width: 100%;
   padding-bottom: 32px;
-  position: fixed;
 `;
 
 const Background = styled.div`

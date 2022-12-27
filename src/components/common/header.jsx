@@ -15,12 +15,12 @@ const Header = () => {
         {login ? (
           <User>잔상이당</User>
         ) : (
-          <LoginStyle to="/user/login">로그인</LoginStyle>
+          <LoginStyle to="/user/login">로그인</ LoginStyle>
         )}
       </TopHeaderContainer>
       <HeaderContainer>
         <div>
-          <LinkStyle to="/">
+          <LinkStyle to="/">  
             <Item>홈</Item>
           </LinkStyle>
           <LinkStyle to = "/makematching">
