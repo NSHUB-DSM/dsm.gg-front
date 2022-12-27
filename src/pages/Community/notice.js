@@ -16,28 +16,51 @@ export default function CommunityPage() {
       <Header />
       <LabelStyle />
       <GameTitle>리그오브레전드</GameTitle>
-      <SortCategoryBox />
-      <PostArea>
-        <PostList
-          title="히샤를리송 미친 원더골 ㄷㄷ"
-          time="1시간 전"
-          username="호날두발냄새"
-          category="자유"
-          image={preimage_1}
-        />
-        <PostList title="ㅇㄹㄴㅇㄹ" />
-      </PostArea>
+      <div>
+        <div>
+          <SortCategoryBox />
+        </div>
+        <PostArea>
+          <PostList
+            title="히샤를리송 미친 원더골 ㄷㄷ"
+            time="1시간 전"
+            username="호날두발냄새"
+            category="자유"
+            image={preimage_1}
+          />
+          <PostList
+            title="히샤를리송 미친 원더골 ㄷㄷ"
+            time="1시간 전"
+            username="호날두발냄새"
+            category="자유"
+            image={preimage_1}
+          />
+          <PostList
+            title="히샤를리송 미친 원더골 ㄷㄷ"
+            time="1시간 전"
+            username="호날두발냄새"
+            category="자유"
+            image={preimage_1}
+          />
+           <PostList
+            title="히샤를리송 미친 원더골 ㄷㄷ"
+            time="1시간 전"
+            username="호날두발냄새"
+            category="자유"
+            image={preimage_1}
+          />
+        </PostArea>
+      </div>
     </Background>
   );
 }
 
 const PostArea = styled.div`
+  float: right;
+  width: 65%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 980px;
-  margin-left: 500px;
-  justify-content: space-around;
+  margin-top: 70px;
 `;
 
 const easeIn = keyframes`

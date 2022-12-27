@@ -4,71 +4,76 @@ import { Link } from "react-router-dom";
 
 export default function PostList(props) {
   return (
-    <>
-      <PostContainer>
-        <div>
+    <PostContainer>
+      <div>
+        <Left>
           <PostTitle to="/notice/{notice_id}">{props.title}</PostTitle>
-        </div>
-        <Image>
-          <img src={props.image} alt="미리보기" />
-        </Image>
-        <Detail>
-          <PostTime>{props.time}</PostTime>
-          <PostByUsername>{props.username}</PostByUsername>
-          <PostCategory>{props.category}</PostCategory>
-        </Detail>
-      </PostContainer>
-    </>
+          <Detail>
+            <PostTime>{props.time}</PostTime>
+            <PostByUsername>{props.username}</PostByUsername>
+            <PostCategory>{props.category}</PostCategory>
+          </Detail>
+        </Left>
+        <img src={props.image} alt="미리보기" />
+      </div>
+    </PostContainer>
   );
 }
 
-const Image = styled.div`
-  margin-left: 650px;
+const Left = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 const PostCategory = styled.p`
   font-size: 14px;
   color: #8a8a8a;
-  padding-left: 19px;
-  padding-top: 27px;
   letter-spacing: 0.5px;
 `;
 
 const Detail = styled.ul`
   list-style: none;
   display: flex;
-  margin-top: -50px;
+  margin-left: 20px;
 `;
 
 const PostByUsername = styled.li`
   font-size: 14px;
   color: #8a8a8a;
-  padding-left: 19px;
-  padding-top: 27px;
-  letter-spacing: 0.5px;
+  margin-right: 20px;
 `;
 
 const PostTime = styled.li`
   font-size: 14px;
   color: #8a8a8a;
-  padding-left: 19px;
-  padding-top: 27px;
+  margin-right: 20px;
   letter-spacing: 0.5px;
 `;
 
 const PostContainer = styled.article`
   width: 800px;
-  height: 99px;
+  height: 100px;  
   border: 1px solid #dddddd;
   background-color: white;
-  div {
-    padding-top: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  div:first-child {
+    display: flex;
+    justify-content: space-between;
+  }
+  img {
+    margin-top: 13px;
+    margin-right: 13px;
+  }
+  :hover {
+    background-color: #fdfdfd;
   }
 `;
 
 const PostTitle = styled(Link)`
   font-size: 16px;
-  padding-left: 19px;
+  margin-left: 19px;
+  padding-top: 20px;
   text-decoration: none;
   color: black;
   cursor: pointer;

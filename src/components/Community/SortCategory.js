@@ -112,4 +112,5 @@ const Container = styled.div`
   background-color: #ffffff;
   margin-left: 200px;
   margin-top: 70px;
+  float: left;
 `;
