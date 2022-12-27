@@ -3,9 +3,6 @@ import Header from "../../../components/common/header";
 import { useState } from "react";
 
 const MakeMatching = () => {
-
-  const [title, setTitle] = useState("");
-
   return (
     <>
       <Header />
@@ -18,15 +15,7 @@ const MakeMatching = () => {
               placeholder="제목을 입력하세요."
               type="text"
               maxLength={20}
-              
-              onChange={(e) => {
-                let temp = Object.assign({}, title);
-                temp.titleValue = e.currentTarget.value;
-                setTitle(temp);
-              }}
-              value={title}
             />
-            <span>{title.length} / 20</span>
           </RoomInputBackground>
           <div>
             <RoomName>티어제한</RoomName>

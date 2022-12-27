@@ -15,16 +15,58 @@ export default function MatchingPage() {
         <Box>
           <Room
             title="플래이상"
-            member="2명"
+            member="2명/2명"
             tear="플래티넘"
             kind="개인/2인 랭크"
           />
-          <Room />
-          <Room />
-          <Room />
-          <Room />
-          <Room />
-          <Room />
+          <Room
+            title="일반이요"
+            member="2명/5명"
+            tear="아이언"
+            kind="일반전"
+          />
+          <Room
+            title="칼바람 즐겜"
+            member="3명/5명"
+            tear="아이언"
+            kind="칼바람"
+          />
+          <Room
+            title="칼바람 즐겜"
+            member="3명/5명"
+            tear="아이언"
+            kind="칼바람"
+          />
+          <Room
+            title="플래이상"
+            member="2명/2명"
+            tear="플래티넘"
+            kind="개인/2인 랭크"
+          />
+          <Room
+            title="일반이요"
+            member="2명/5명"
+            tear="아이언"
+            kind="일반전"
+          />
+          <Room
+            title="플래이상"
+            member="2명/2명"
+            tear="플래티넘"
+            kind="개인/2인 랭크"
+          />
+          <Room
+            title="칼바람 즐겜"
+            member="3명/5명"
+            tear="아이언"
+            kind="칼바람"
+          />
+          <Room
+            title="플래이상"
+            member="2명/2명"
+            tear="플래티넘"
+            kind="개인/2인 랭크"
+          />
         </Box>
       </Wrapper>
     </MatchingBackground>
