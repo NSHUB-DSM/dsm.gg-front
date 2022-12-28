@@ -33,7 +33,7 @@ const Header = () => {
           <LinkStyle to="/ranking">
             <Item>랭킹</Item>
           </LinkStyle>
-          <LinkStyle to="/notice">
+          <LinkStyle to="/board/list">
             <Item>커뮤니티</Item>
           </LinkStyle>
         </div>

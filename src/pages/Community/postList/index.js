@@ -7,7 +7,7 @@ export default function PostList(props) {
     <PostContainer>
       <div>
         <Left>
-          <PostTitle to="/notice/{notice_id}">{props.title}</PostTitle>
+          <PostTitle to="/board/{id}">{props.title}</PostTitle>
           <Detail>
             <PostTime>{props.time}</PostTime>
             <PostByUsername>{props.username}</PostByUsername>

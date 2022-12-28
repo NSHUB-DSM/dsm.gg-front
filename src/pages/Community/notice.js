@@ -43,8 +43,8 @@ export default function CommunityPage() {
             image={preimage_1}
           />
            <PostList
-            title="히샤를리송 미친 원더골 ㄷㄷ"
-            time="1시간 전"
+            title="실시간 손흥민 득점왕 선두 미쳤다"
+            time="4개월 전"
             username="호날두발냄새"
             category="자유"
             image={preimage_1}
