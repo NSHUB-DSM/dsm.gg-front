@@ -73,12 +73,24 @@ export default function MatchingPage() {
   );
 }
 
+const easeIn = keyframes`
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+  }
+`
+
 const Title = styled.p`
   font-size: 40px;
   font-weight: 650;
   color: #7b5eb4;
   text-align: center;
   margin-top: 40px;
+  animation: ${easeIn} 0.7s ease-in;
 `;
 
 const Box = styled.div`
