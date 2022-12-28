@@ -28,7 +28,7 @@ const Left = styled.div`
 const PostCategory = styled.p`
   font-size: 14px;
   color: #8a8a8a;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.1px;
 `;
 
 const Detail = styled.ul`
@@ -47,7 +47,7 @@ const PostTime = styled.li`
   font-size: 14px;
   color: #8a8a8a;
   margin-right: 20px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.1px;
 `;
 
 const PostContainer = styled.article`
