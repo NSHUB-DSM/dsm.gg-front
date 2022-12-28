@@ -3,19 +3,26 @@ import Header from "../../../components/common/header";
 import { useState } from "react";
 
 const MakeMatching = () => {
+  const [title, setTitle] = useState("");
+  const onChange = (e) => {
+    setTitle(e.target.value);
+  };
   return (
     <>
       <Header />
       <MakeContainer>
         <Title>매칭 생성</Title>
         <div>
+          <RoomName>방 제목</RoomName>
           <RoomInputBackground>
-            <RoomName>방 제목</RoomName>
             <RoomTitle
               placeholder="제목을 입력하세요."
               type="text"
               maxLength={20}
+              onChange={onChange}
+              value={title}
             />
+            <span>{title.length} / 20</span>
           </RoomInputBackground>
           <div>
             <RoomName>티어제한</RoomName>
@@ -93,6 +100,11 @@ const Title = styled.p`
 const RoomInputBackground = styled.div`
   flex-direction: column;
   margin-bottom: 60px;
+  width: 650px;
+  height: 50px;
+  border: 1px solid #7b5eb4;
+  border-radius: 5px;
+  justify-content: center;
 `;
 
 const RoomName = styled.p`
@@ -102,11 +114,10 @@ const RoomName = styled.p`
 `;
 
 const RoomTitle = styled.input`
-  width: 650px;
+  width: 560px;
   height: 45px;
-  border: 1px solid #7b5eb4;
-  border-radius: 5px;
   font-size: 16px;
+  margin-left: 20px;
 `;
 
 const CreateButton = styled.button`
