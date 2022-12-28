@@ -26,7 +26,6 @@ const Header = () => {
           <LinkStyle to = "/makematching">
             <Item>매칭 생성</Item>
           </LinkStyle>
-          <Item>통계</Item>
           <LinkStyle to="/match">
             <Item>매칭</Item>
           </LinkStyle>
@@ -89,6 +88,7 @@ const TopHeaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
 `;
 
 const LoLButton = styled.div`
@@ -119,6 +119,7 @@ const HeaderContainer = styled.div`
     justify-content: space-between;
     align-items: center;
   }
+  
 `;
 
 const Item = styled.p`
