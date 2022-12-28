@@ -14,6 +14,7 @@ export default function PostDetail(props) {
         <Hits>{props.hits}</Hits>
         <Comments>{props.comments}</Comments>
       </MoreDetail>
+      <Line />
       <ImgContainer>
         <img src={props.image} alt="이미지" />
         <img src={props.image2} alt="이미지2" />
@@ -21,6 +22,12 @@ export default function PostDetail(props) {
     </PostContainer>
   );
 }
+
+const Line = styled.div`
+  width: 765px;
+  border-top: 1px solid #EDEDED;
+  margin-top: 40px;
+`
 
 const ImgContainer = styled.div`
   margin-left: 100px;
@@ -56,7 +63,7 @@ const PostTime = styled.li`
   font-size: 14px;
   color: #8a8a8a;
   margin-right: 10px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.1px;
 `;
 
 const PostCategory = styled.li`
@@ -82,7 +89,6 @@ const PostTitle = styled.p`
 
 const PostContainer = styled.div`
   width: 765px;
-  height: 1036px;
   margin-left: 600px;
   margin-top: 40px;
   background-color: white;
