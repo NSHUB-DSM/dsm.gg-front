@@ -107,6 +107,7 @@ const RoomTitle = styled.input`
   border: 1px solid #7b5eb4;
   border-radius: 5px;
   font-size: 16px;
+  padding-left: 14px;
 `;
 
 const CreateButton = styled.button`
